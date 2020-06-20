@@ -37,9 +37,59 @@ function titleClickHandler(event){
   targetArticle.classList.add('active');
 }
 
-const links = document.querySelectorAll('.titles a');
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
 
-for(let link of links){
-  link.addEventListener('click', titleClickHandler);
+  function generateTitleLinks(){
+
+    /* remove contents of titleList */
+
+    const titleList = document.querySelector('optTitleListSelector');
+
+    function clearMessages(){
+      titleList.innerHTML = '';
+    }
+
+    const articles = document.querySelectorAll('optArticleSelector');
+
+    /* for each article */
+
+    let html = '';
+
+    for (let article of articles) {
+  
+      /* get the article id */
+
+      const articleId = article.getAttribute('id');
+
+      /* find the title element */
+
+      const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+  
+      /* get the title from the title element */
+  
+      /* create HTML of the link */
+
+      const linkHTML = 'id' + articleId + 'title' + articleTitle + 'titleList';
+      console.log ('poprawny kod html');
+
+      /* insert link into titleList */
+
+      html = html + linkHTML;
+
+      titleList.innerHTML = html;
+
+    }
+
+    
+
+    const links = document.querySelectorAll('.titles a');
+
+    for(let link of links){
+      link.addEventListener('click', titleClickHandler);
  
-}
+    }
+  }
+  
+  generateTitleLinks();
