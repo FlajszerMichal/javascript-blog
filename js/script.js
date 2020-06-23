@@ -170,7 +170,7 @@ function tagClickHandler(event){
 
   /* START LOOP: for each active tag link */
 
-  for (let tagLinks of tagsLinks){
+  for (let tagLinks of tagLinks){
 
     /* remove class active */
 
@@ -186,7 +186,7 @@ function tagClickHandler(event){
 
   /* START LOOP: for each found tag link */
 
-  for (let alltagLinks of alltagsLinks){
+  for (let alltagLinks of alltagLinks){
 
     /* add class active */
 
@@ -212,7 +212,7 @@ function addClickListenersToTags(){
 
   /* START LOOP: for each link */
 
-  for (let alltagLinks of alltagsLinks){
+  for (let alltagLinks of alltagLinks){
 
     /* add tagClickHandler as event listener for that link */
 
@@ -276,7 +276,7 @@ function addClickListenersToAuthors(){
 
   /* START LOOP: for each link */
 
-  for (let allAuthorLinks of alltAuthorsLinks){
+  for (let allAuthorLinks of allAuthorLinks){
 
     /* add tagClickHandler as event listener for that link */
 
@@ -314,11 +314,11 @@ function authorClickHandler(){
 
   /* START LOOP: for each active tag link */
 
-  for (let authorLinks of authorsLinks){
+  for (let authorLinks of authorLinks){
 
     /* remove class active */
 
-    authorsLinks.classList.remove('active');
+    authorLinks.classList.remove('active');
 
     /* END LOOP: for each active tag link */
 
@@ -330,7 +330,7 @@ function authorClickHandler(){
 
   /* START LOOP: for each found tag link */
 
-  for (let allauthorLinks of allauthorsLinks){
+  for (let allauthorLinks of allauthorLinks){
 
     /* add class active */
 
